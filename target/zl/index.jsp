@@ -1,244 +1,273 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="GBK">
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Landing Page | Amaze UI Example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
-    <title>豆瓣同城 - 音乐 - 北京 | Just a iScroll Demo</title>
-    <link rel="stylesheet" href="assets/css/amazeui.css"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
     <style>
-        html,
-        body,
-        .page {
-            height: 100%;
-        }
-
-        #wrapper {
-            position: absolute;
-            top: 49px;
-            bottom: 0;
-            overflow: hidden;
-            margin: 0;
-            width: 100%;
-            padding: 0 8px;
-            background-color: #f8f8f8;
-        }
-
-        .am-list {
-            margin: 0;
-        }
-
-        .am-list > li {
-            background: none;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-        }
-
-        .pull-action {
+        .get {
+            background: #1E5B94;
+            color: #fff;
             text-align: center;
-            height: 45px;
-            line-height: 45px;
-            color: #999;
+            padding: 100px 0;
         }
 
-        .pull-action .am-icon-spin {
-            display: none;
+        .get-title {
+            font-size: 200%;
+            border: 2px solid #fff;
+            padding: 20px;
+            display: inline-block;
         }
 
-        .pull-action.loading .am-icon-spin {
-            display: block;
+        .get-btn {
+            background: #fff;
         }
 
-        .pull-action.loading .pull-label {
-            display: none;
+        .detail {
+            background: #fff;
+        }
+
+        .detail-h2 {
+            text-align: center;
+            font-size: 150%;
+            margin: 40px 0;
+        }
+
+        .detail-h3 {
+            color: #1f8dd6;
+        }
+
+        .detail-p {
+            color: #7f8c8d;
+        }
+
+        .detail-mb {
+            margin-bottom: 30px;
+        }
+
+        .hope {
+            background: #0bb59b;
+            padding: 50px 0;
+        }
+
+        .hope-img {
+            text-align: center;
+        }
+
+        .hope-hr {
+            border-color: #149C88;
+        }
+
+        .hope-title {
+            font-size: 140%;
+        }
+
+        .about {
+            background: #fff;
+            padding: 40px 0;
+            color: #7f8c8d;
+        }
+
+        .about-color {
+            color: #34495e;
+        }
+
+        .about-title {
+            font-size: 180%;
+            padding: 30px 0 50px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #7f8c8d;
+            margin: 0;
+            padding: 15px 0;
+            text-align: center;
+            background: #2d3e50;
         }
     </style>
 </head>
 <body>
-<div class="page">
-    <header data-am-widget="header" class="am-header am-header-default">
-        <h1 class="am-header-title">
-            同城 - 音乐
+<header class="am-topbar am-topbar-fixed-top">
+    <div class="am-container">
+        <h1 class="am-topbar-brand">
+            <a href="#">Amaze UI</a>
         </h1>
-    </header>
 
-    <div id="wrapper" data-am-widget="list_news"
-         class="am-list-news am-list-news-default">
-        <div class="am-list-news-bd">
-            <div class="pull-action loading" id="pull-down">
-        <span class="am-icon-arrow-down pull-label"
-              id="pull-down-label"> 下拉刷新</span>
-                <span class="am-icon-spinner am-icon-spin"></span>
-            </div>
-            <ul class="am-list" id="events-list">
-                <li class="am-list-item-desced">
-                    <div class="am-list-item-text">
-                        正在加载内容...
-                    </div>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+                data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+                class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="collapse-head">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li class="am-active"><a href="#">首页</a></li>
+                <li><a href="#">项目</a></li>
+                <li class="am-dropdown" data-am-dropdown>
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                        下拉菜单 <span class="am-icon-caret-down"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li class="am-dropdown-header">标题</li>
+                        <li><a href="#">1. 默认样式</a></li>
+                        <li><a href="#">2. 基础设置</a></li>
+                        <li><a href="#">3. 文字排版</a></li>
+                        <li><a href="#">4. 网格系统</a></li>
+                    </ul>
                 </li>
             </ul>
-            <div class="pull-action" id="pull-up">
-        <span class="am-icon-arrow-down pull-label"
-              id="pull-up-label"> 上拉加载更多</span>
-                <span class="am-icon-spinner am-icon-spin"></span>
+
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
+            </div>
+
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="get">
+    <div class="am-g">
+        <div class="am-u-lg-12">
+            <h1 class="get-title">Amaze UI - HTML5 跨屏前端框架</h1>
+
+            <p>
+                期待你的参与，共同打造一个简单易用的前端框架
+            </p>
+
+            <p>
+                <a href="http://amazeui.org" class="am-btn am-btn-sm get-btn">获取新get技能√</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="detail">
+    <div class="am-g am-container">
+        <div class="am-u-lg-12">
+            <h2 class="detail-h2">One Web 、Any Device，期待和你一起去实现!</h2>
+
+            <div class="am-g">
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+
+                    <h3 class="detail-h3">
+                        <i class="am-icon-mobile am-icon-sm"></i>
+                        为移动而生
+                    </h3>
+
+                    <p class="detail-p">
+                        Amaze UI 采用业内先进的 mobile first 理念，从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。
+                    </p>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+                    <h3 class="detail-h3">
+                        <i class="am-icon-cogs am-icon-sm"></i>
+                        组件丰富，模块化
+                    </h3>
+
+                    <p class="detail-p">
+                        Amaze UI 含近 20 个 CSS 组件、10 个 JS 组件，更有 17 款包含近 60 个主题的 Widgets，可快速构建界面出色、体验优秀的跨屏页面，大幅度提升你的开发效率。
+                    </p>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+                    <h3 class="detail-h3">
+                        <i class="am-icon-check-square-o am-icon-sm"></i>
+                        本地化支持
+                    </h3>
+
+                    <p class="detail-p">
+                        相比国外的前端框架，Amaze UI 专注解决中文排版优化问题，根据操作系统调整字体，实现最佳中文排版效果；针对国内主流浏览器及 App 内置浏览器提供更好的兼容性支持，为你节省大量兼容性调试时间。
+                    </p>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+                    <h3 class="detail-h3">
+                        <i class="am-icon-send-o am-icon-sm"></i>
+                        轻量级，高性能
+                    </h3>
+
+                    <p class="detail-p">
+                        Amaze UI 非常注重性能，基于轻量的 Zepto.js 开发，并使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让你的 Web 应用可以高速载入。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="hope">
+    <div class="am-g am-container">
+        <div class="am-u-lg-4 am-u-md-6 am-u-sm-12 hope-img">
+            <img src="assets/i/examples/landing.png" alt="" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+            <hr class="am-article-divider am-show-sm-only hope-hr">
+        </div>
+        <div class="am-u-lg-8 am-u-md-6 am-u-sm-12">
+            <h2 class="hope-title">同我们一起打造你的前端框架</h2>
+
+            <p>
+                在知识爆炸的年代，我们不愿成为知识的过客，拥抱开源文化，发挥社区的力量，参与到Amaze Ui开源项目能获得自我提升。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="about">
+    <div class="am-g am-container">
+        <div class="am-u-lg-12">
+            <h2 class="about-title about-color">Amaze UI 崇尚开放、自由，非常欢迎大家的参与</h2>
+
+            <div class="am-g">
+                <div class="am-u-lg-6 am-u-md-4 am-u-sm-12">
+                    <form class="am-form">
+                        <label for="name" class="about-color">你的姓名</label>
+                        <input id="name" type="text">
+                        <br/>
+                        <label for="email" class="about-color">你的邮箱</label>
+                        <input id="email" type="email">
+                        <br/>
+                        <label for="message" class="about-color">你的留言</label>
+                        <textarea id="message"></textarea>
+                        <br/>
+                        <button type="submit" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-check"></i> 提 交</button>
+                    </form>
+                    <hr class="am-article-divider am-show-sm-only">
+                </div>
+
+                <div class="am-u-lg-6 am-u-md-8 am-u-sm-12">
+                    <h4 class="about-color">关于我们</h4>
+
+                    <p>AllMobilize Inc (美通云动科技有限公司)
+                        由前微软美国总部IE浏览器核心研发团队成员及移动互联网行业专家在美国西雅图创立，旨在解决网页在不同移动设备屏幕上的适配问题。基于国际专利技术并结合最前沿的HTML5技术，云适配解决方案可以帮助企业快速将桌面版网站适配到各种移动设备终端的屏幕上，不仅显著地提高了企业网站的用户体验以及销售转化率，而且大幅度地节省了企业开发和维护移动网站的费用。</p>
+                    <h4 class="about-color">团队介绍</h4>
+
+                    <p>AllMobilize Inc 获得了微软创投孵化器的支持，其领先科技已得到全球多家企业及机构的认可与信赖，客户包括全球500强企业、美国政府、国内政府机关、国内外上市公司、以及互联网标准化组织W3C。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>? 2014 <a href="http://www.yunshipei.com" target="_blank">AllMobilize, Inc.</a> Licensed under <a
+            href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. by the AmazeUI Team.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/handlebars.min.js"></script>
-<script type="text/x-handlebars-template" id="tpi-list-item">
-    {{#each this}}
-    <li class="am-list-item-desced" data-id="{{id}}">
-        <a href="{{alt}}" class="am-list-item-hd" target="_blank">{{title}}</a>
-
-        <div class="am-list-item-text">{{content}}</div>
-    </li>
-    {{/each}}
-</script>
+<!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
-<script>
-    (function($) {
-        var EventsList = function(element, options) {
-            var $main = $('#wrapper');
-            var $list = $main.find('#events-list');
-            var $pullDown = $main.find('#pull-down');
-            var $pullDownLabel = $main.find('#pull-down-label');
-            var $pullUp = $main.find('#pull-up');
-            var topOffset = -$pullDown.outerHeight();
-
-            this.compiler = Handlebars.compile($('#tpi-list-item').html());
-            this.prev = this.next = this.start = options.params.start;
-            this.total = null;
-
-            this.getURL = function(params) {
-                var queries = ['callback=?'];
-                for (var key in  params) {
-                    if (key !== 'start') {
-                        queries.push(key + '=' + params[key]);
-                    }
-                }
-                queries.push('start=');
-                return options.api + '?' + queries.join('&');
-            };
-
-            this.renderList = function(start, type) {
-                var _this = this;
-                var $el = $pullDown;
-
-                if (type === 'load') {
-                    $el = $pullUp;
-                }
-
-                $.getJSON(this.URL + start).then(function(data) {
-                    console.log(data);
-                    _this.total = data.total;
-                    var html = _this.compiler(data.events);
-                    if (type === 'refresh') {
-                        $list.children('li').first().before(html);
-                    } else if (type === 'load') {
-                        $list.append(html);
-                    } else {
-                        $list.html(html);
-                    }
-
-                    // refresh iScroll
-                    setTimeout(function() {
-                        _this.iScroll.refresh();
-                    }, 100);
-                }, function() {
-                    console.log('Error...')
-                }).always(function() {
-                    _this.resetLoading($el);
-                    if (type !== 'load') {
-                        _this.iScroll.scrollTo(0, topOffset, 800, $.AMUI.iScroll.utils.circular);
-                    }
-                });
-            };
-
-            this.setLoading = function($el) {
-                $el.addClass('loading');
-            };
-
-            this.resetLoading = function($el) {
-                $el.removeClass('loading');
-            };
-
-            this.init = function() {
-                var myScroll = this.iScroll = new $.AMUI.iScroll('#wrapper', {
-                    click: true
-                });
-                // myScroll.scrollTo(0, topOffset);
-                var _this = this;
-                var pullFormTop = false;
-                var pullStart;
-
-                this.URL = this.getURL(options.params);
-                this.renderList(options.params.start);
-
-                myScroll.on('scrollStart', function() {
-                    if (this.y >= topOffset) {
-                        pullFormTop = true;
-                    }
-
-                    pullStart = this.y;
-                    // console.log(this);
-                });
-
-                myScroll.on('scrollEnd', function() {
-                    if (pullFormTop && this.directionY === -1) {
-                        _this.handlePullDown();
-                    }
-                    pullFormTop = false;
-
-                    // pull up to load more
-                    if (pullStart === this.y && (this.directionY === 1)) {
-                        _this.handlePullUp();
-                    }
-                });
-            };
-
-            this.handlePullDown = function() {
-                console.log('handle pull down');
-                if (this.prev > 0) {
-                    this.setLoading($pullDown);
-                    this.prev -= options.params.count;
-                    this.renderList(this.prev, 'refresh');
-                } else {
-                    console.log('别刷了，没有了');
-                }
-            };
-
-            this.handlePullUp = function() {
-                console.log('handle pull up');
-                if (this.next < this.total) {
-                    this.setLoading($pullUp);
-                    this.next += options.params.count;
-                    this.renderList(this.next, 'load');
-                } else {
-                    console.log(this.next);
-                    // this.iScroll.scrollTo(0, topOffset);
-                }
-            }
-        };
-
-        $(function() {
-            var app = new EventsList(null, {
-                api: 'https://api.douban.com/v2/event/list',
-                params: {
-                    start: 100,
-                    type: 'music',
-                    count: 10,
-                    loc: 'beijing'
-                }
-            });
-            app.init();
-        });
-
-        document.addEventListener('touchmove', function(e) {
-            e.preventDefault();
-        }, false);
-    })(window.jQuery);
-</script>
 </body>
 </html>
-<!--http://pnc.co.il/dev/iscroll-5-pull-to-refresh-and-infinite-demo.html-->
